@@ -1,0 +1,895 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About Me</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 Trial Version - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/aboutme.css" rel="stylesheet">
+<link href="css/wb15_aboutme.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      var skillsProgressbar1 = document.querySelector('#skillsProgressbar1 .progress-bar');
+      var skillsProgressbar1_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar1_observer.observe(skillsProgressbar1);
+      var skillsProgressbar2 = document.querySelector('#skillsProgressbar2 .progress-bar');
+      var skillsProgressbar2_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar2_observer.observe(skillsProgressbar2);
+      var skillsProgressbar3 = document.querySelector('#skillsProgressbar3 .progress-bar');
+      var skillsProgressbar3_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar3_observer.observe(skillsProgressbar3);
+      var skillsProgressbar4 = document.querySelector('#skillsProgressbar4 .progress-bar');
+      var skillsProgressbar4_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar4_observer.observe(skillsProgressbar4);
+      var cookiePopup = document.querySelector('#cookiePopup');
+      var bscookiePopup = new bootstrap.Modal(cookiePopup);
+      cookiePopup.addEventListener('show.bs.modal', function(e)
+      {
+         var dlg = document.querySelector('#cookiePopup .modal-dialog');
+         dlg.classList.remove('animate-hide');
+         dlg.classList.add('animate-show');
+      });
+      cookiePopup.addEventListener('hide.bs.modal', function(e)
+      {
+         var dlg = document.querySelector('#cookiePopup .modal-dialog');
+         dlg.classList.remove('animate-show');
+         var forceReflow = e.target.offsetWidth;
+         dlg.classList.add('animate-hide');
+      });
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#intro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#skills']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skills').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#servicesLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#facts']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#portfolio']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolio').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollportfolio()
+      {
+         var $obj = $("#wb_portfolio");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolio();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolio();
+      });
+      $("a[href*='#portfolioLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollportfolioLayoutGrid1()
+      {
+         var $obj = $("#wb_portfolioLayoutGrid1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolioLayoutGrid1();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolioLayoutGrid1();
+      });
+      $("a[href*='#portfolioLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollportfolioLayoutGrid2()
+      {
+         var $obj = $("#wb_portfolioLayoutGrid2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolioLayoutGrid2();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolioLayoutGrid2();
+      });
+      function aspectRatioportfolioRollOverText1()
+      {
+         var $obj = $("#portfolioRollOverText1");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText1() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText1();
+      });
+      aspectRatioportfolioRollOverText1();
+      function aspectRatioportfolioRollOverText2()
+      {
+         var $obj = $("#portfolioRollOverText2");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText2() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText2();
+      });
+      aspectRatioportfolioRollOverText2();
+      function aspectRatioportfolioRollOverText3()
+      {
+         var $obj = $("#portfolioRollOverText3");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText3() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText3();
+      });
+      aspectRatioportfolioRollOverText3();
+      function aspectRatioportfolioRollOverText4()
+      {
+         var $obj = $("#portfolioRollOverText4");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText4() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText4();
+      });
+      aspectRatioportfolioRollOverText4();
+      function aspectRatioportfolioRollOverText5()
+      {
+         var $obj = $("#portfolioRollOverText5");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText5() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText5();
+      });
+      aspectRatioportfolioRollOverText5();
+      function aspectRatioportfolioRollOverText6()
+      {
+         var $obj = $("#portfolioRollOverText6");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText6() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText6();
+      });
+      aspectRatioportfolioRollOverText6();
+   function countUpfactsJavaScript1()
+   {
+      var $obj = $('#factsJavaScript1');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript1();
+   });
+   countUpfactsJavaScript1();
+   function countUpfactsJavaScript2()
+   {
+      var $obj = $('#factsJavaScript2');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript2();
+   });
+   countUpfactsJavaScript2();
+   function countUpfactsJavaScript3()
+   {
+      var $obj = $('#factsJavaScript3');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript3();
+   });
+   countUpfactsJavaScript3();
+   function countUpfactsJavaScript4()
+   {
+      var $obj = $('#factsJavaScript4');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 10000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript4();
+   });
+   countUpfactsJavaScript4();
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+      if (iOS)
+      {
+         $('#wb_facts,#wb_contact').css('background-attachment', 'scroll');
+      }
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      var $progressbars = $('.ui-progressbar');
+      
+      $progressbars.each(function() 
+      {
+        var $obj = $(this);
+        $obj.data('value', $obj.progressbar('option', 'value'));
+        $obj.data('done', false);
+        $obj.progressbar('option', 'value', 0);
+      });
+      $(window).bind('scroll', function() 
+      {
+         $progressbars.each(function() 
+         {
+            var $obj = $(this);
+            if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+            {
+               $obj.data('done', true);
+               $obj.animate({scroll: 1}, 
+               { 
+                  duration: 3000, 
+                  step: function(now) 
+                  {
+                     var $obj = $(this);
+                     var val = Math.round($obj.data('value') * now);
+                     $obj.progressbar('option', 'value', val);
+                  }
+               });
+            }
+         });
+      }).triggerHandler('scroll');
+   });
+</script><script>   
+   $(document).ready(function () 
+   {
+       if (document.cookie.indexOf("cookienotice=true")<0) 
+       {
+           $("#cookiePopup").modal("show");
+       }
+       $("#cookieCheckBox").change(function () 
+       {
+          document.cookie = "cookienotice=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";    
+          $("#cookiePopup").modal("hide");
+       });
+      
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_aboutMeIcon" style="display:inline-block;width:47px;height:42px;text-align:center;z-index:0;">
+                  <a href="./wb15_aboutme.html"><div id="aboutMeIcon"><i class="fa fa-id-card-o"></i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_aboutMeMenu" style="display:block;width:100%;z-index:1;">
+                  <ul id="aboutMeMenu" role="menubar" class="nav">
+                     <li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="#intro" target="_self">HOME</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link" href="#skills" target="_self">ABOUT</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link" href="#services" target="_self">SERVICES</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link" href="#facts" target="_self">FACTS</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link" href="#portfolio" target="_self">PORTFOLIO</a>
+                     </li>
+                     <li role="menuitem" class="nav-item"><a class="nav-link" href="#contact" target="_self">CONTACT</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_intro">
+      <div id="intro-divider-top">
+         <svg version="1.1" viewBox="0 0 240 24" preserveAspectRatio="none">
+            <path class="divider-fill" style="opacity:0.33" d="M0,13.229V23.87h240V13.27C212.247,6.884,170.508,0,119.81,0 C69.18,0,27.642,6.884,0,13.229z"/>
+            <path class="divider-fill" style="opacity:0.33" d="M0,18.904V24h240v-5.036c-21.641-6.315-64.639-16.257-120.171-16.257 C64.351,2.707,21.572,12.589,0,18.904z"/>
+            <path class="divider-fill" d="M119.829,5.115C47.852,5.115,0,24,0,24h239.961C239.961,24,191.816,5.115,119.829,5.115z"/>
+         </svg>
+      </div>
+      <div id="intro-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z">
+            </path>
+         </svg></div>
+      <div id="intro">
+         <div class="col-1">
+            <div id="wb_homeText">
+               <p style="font-size:32px;line-height:36px;font-weight:bold;">My Name is Whilack Vert</p>
+               <p style="font-size:15px;line-height:16.5px;">&nbsp;</p>
+               <p style="font-size:16px;line-height:18px;">I'm a Web Designer</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_skills">
+      <div id="skills">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_skillsHeading">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:24px;line-height:27.5px;">Skills</span></p>
+                                 </div>
+                                 <label for="" id="skillsLabel1" style="display:block;width:100%;line-height:16px;z-index:4;">HTML</label>
+                                 <div id="skillsProgressbar1" style="display:block;width:100%;height:14px;z-index:5;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" title="90%" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel2" style="display:block;width:100%;line-height:16px;z-index:6;">CSS</label>
+                                 <div id="skillsProgressbar2" style="display:block;width:100%;height:14px;z-index:7;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" title="80%" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel3" style="display:block;width:100%;line-height:16px;z-index:8;">JavaScript</label>
+                                 <div id="skillsProgressbar3" style="display:block;width:100%;height:14px;z-index:9;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" title="60%" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel4" style="display:block;width:100%;line-height:16px;z-index:10;">PHP:</label>
+                                 <div id="skillsProgressbar4" style="display:block;width:100%;height:14px;z-index:11;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" title="75%" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_skillsText">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:24px;font-weight:bold;">About Me</p>
+                                    <p style="font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/><br/>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <p style="font-size:16px;font-weight:bold;">&nbsp;</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesHeading" style="display:block;width:100%;z-index:15;">
+                     <h1 id="servicesHeading">SERVICES</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:87;">
+      <div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:16;">
+         <a href="#intro"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard1" style="display:flex;width:100%;z-index:28;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard1-card-body">
+                        <div id="servicesCard1-card-item0"><a href="http://"><i class="fa fa-globe"></i></a></div>
+                        <div id="servicesCard1-card-item1">WEB DESIGN</div>
+                        <div id="servicesCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard2" style="display:flex;width:100%;z-index:29;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard2-card-body">
+                        <div id="servicesCard2-card-item0"><a href="http://"><i class="fa fa-code"></i></a></div>
+                        <div id="servicesCard2-card-item1">WEB DEVELOPMENT</div>
+                        <div id="servicesCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard3" style="display:flex;width:100%;z-index:30;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard3-card-body">
+                        <div id="servicesCard3-card-item0"><a href="http://"><i class="fa fa-paint-brush"></i></a></div>
+                        <div id="servicesCard3-card-item1">GRAPHIC DESIGN</div>
+                        <div id="servicesCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid2">
+      <div id="servicesLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard4" style="display:flex;width:100%;z-index:31;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard4-card-body">
+                        <div id="servicesCard4-card-item0"><a href="http://"><i class="fa fa-mobile"></i></a></div>
+                        <div id="servicesCard4-card-item1">RESPONSIVE DESIGN</div>
+                        <div id="servicesCard4-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard5" style="display:flex;width:100%;z-index:32;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard5-card-body">
+                        <div id="servicesCard5-card-item0"><a href="http://"><i class="fa fa-camera"></i></a></div>
+                        <div id="servicesCard5-card-item1">PHOTOGRAPHY</div>
+                        <div id="servicesCard5-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard6" style="display:flex;width:100%;z-index:33;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard6-card-body">
+                        <div id="servicesCard6-card-item0"><a href="http://"><i class="fa fa-comments-o"></i></a></div>
+                        <div id="servicesCard6-card-item1">MARKETING</div>
+                        <div id="servicesCard6-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_facts">
+      <div id="facts-overlay"></div>
+      <div id="facts">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_factsIcon1" style="display:inline-block;width:59px;height:48px;text-align:center;z-index:34;">
+                     <a href="./wb15_aboutme.html"><div id="factsIcon1"><i class="fa fa-users"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript1" style="display:block;width:100%;z-index:35;">
+                     <div data-count="128" style="color:#FFFFFF;font-size:32px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none;" id="factsJavaScript1"></div>
+                  </div>
+                  <div id="wb_factsHeading1" style="display:block;width:100%;z-index:36;">
+                     <h2 id="factsHeading1">Happy Customers</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_factsIcon2" style="display:inline-block;width:59px;height:48px;text-align:center;z-index:37;">
+                     <a href="./wb15_aboutme.html"><div id="factsIcon2"><i class="fa fa-briefcase"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript2" style="display:block;width:100%;z-index:38;">
+                     <div data-count="256" style="color:#FFFFFF;font-size:32px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none;" id="factsJavaScript2"></div>
+                  </div>
+                  <div id="wb_factsHeading2" style="display:block;width:100%;z-index:39;">
+                     <h2 id="factsHeading2">Projects</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_factsIcon3" style="display:inline-block;width:59px;height:48px;text-align:center;z-index:40;">
+                     <a href="./wb15_aboutme.html"><div id="factsIcon3"><i class="fa fa-diamond"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript3" style="display:block;width:100%;z-index:41;">
+                     <div data-count="64" style="color:#FFFFFF;font-size:32px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none;" id="factsJavaScript3"></div>
+                  </div>
+                  <div id="wb_factsHeading3" style="display:block;width:100%;z-index:42;">
+                     <h2 id="factsHeading3">Awards</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_factsIcon4" style="display:inline-block;width:59px;height:48px;text-align:center;z-index:43;">
+                     <a href="./wb15_aboutme.html"><div id="factsIcon4"><i class="fa fa-clock-o"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript4" style="display:block;width:100%;z-index:44;">
+                     <div data-count="9999" style="color:#FFFFFF;font-size:32px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none;" id="factsJavaScript4"></div>
+                  </div>
+                  <div id="wb_factsHeading4" style="display:block;width:100%;z-index:45;">
+                     <h2 id="factsHeading4">Hours of Work</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolio">
+      <div id="portfolio">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_portfolioHeading" style="display:block;width:100%;z-index:46;">
+                     <h1 id="portfolioHeading">PORTFOLIO</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolioLayoutGrid1">
+      <div id="portfolioLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="portfolioRollOverText1" style="overflow:hidden;display:block;position:relative;">
+                     <img alt="ABOUT" class="image" src="images/template01.jpg" width="293" height="212">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="./wb15_aboutme_with_breakpoint.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="portfolioRollOverText2" style="overflow:hidden;display:block;position:relative;">
+                     <img alt="ABOUT" class="image" src="images/template02.jpg" width="293" height="212">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="./wb15_aboutme_with_breakpoint.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="portfolioRollOverText3" style="overflow:hidden;display:block;position:relative;">
+                     <img alt="ABOUT" class="image" src="images/template03.jpg" width="293" height="212">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="./wb15_aboutme_with_breakpoint.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolioLayoutGrid2">
+      <div id="portfolioLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="portfolioRollOverText4" style="overflow:hidden;display:block;position:relative;">
+                     <img alt="ABOUT" class="image" src="images/template04.jpg" width="293" height="212">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="./wb15_aboutme_with_breakpoint.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="portfolioRollOverText5" style="overflow:hidden;display:block;position:relative;">
+                     <img alt="ABOUT" class="image" src="images/template05.jpg" width="293" height="212">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="./wb15_aboutme_with_breakpoint.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="portfolioRollOverText6" style="overflow:hidden;display:block;position:relative;">
+                     <img alt="ABOUT" class="image" src="images/template06.jpg" width="293" height="212">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="./wb15_aboutme_with_breakpoint.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactForm">
+                     <div id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_contactText1">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:24px;line-height:27.5px;">Send A Message</span></p>
+                                 </div>
+                                 <input type="text" id="contactName" style="display:block;width:100%;height:42px;z-index:54;" name="name" value="" spellcheck="false" placeholder="Name">
+                                 <input type="text" id="contactEmail" style="display:block;width:100%;height:42px;z-index:55;" name="email" value="" spellcheck="false" placeholder="Email">
+                                 <input type="text" id="contactSubject" style="display:block;width:100%;height:42px;z-index:56;" name="subject" value="" spellcheck="false" placeholder="Subject">
+                                 <textarea name="message" id="contactMessage" style="display:block;width:100%;;height:108px;z-index:57;" rows="4" cols="35" autocomplete="off" spellcheck="false" placeholder="Message"></textarea>
+                                 <input type="submit" id="contactButton" name="" value="Submit" style="display:inline-block;width:128px;height:39px;z-index:58;">
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:24px;font-weight:bold;">Contact Me</p>
+                                    <p style="font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/><br/>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <p style="font-size:16px;font-weight:bold;">&nbsp;</p>
+                                 </div>
+                                 <div id="wb_contactIcon1" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:60;">
+                                    <a href="./wb15_aboutme.html"><div id="contactIcon1"><i class="fa fa-facebook"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon2" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:61;">
+                                    <a href="./wb15_aboutme.html"><div id="contactIcon2"><i class="fa fa-twitter"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon3" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:62;">
+                                    <a href="./wb15_aboutme.html"><div id="contactIcon3"><i class="fa fa-instagram"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon4" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:63;">
+                                    <a href="./wb15_aboutme.html"><div id="contactIcon4"><i class="fa fa-youtube"></i></div></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText3">
+                  <p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="cookiePopup" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+               <div class="modal-title"></div>
+            </div>
+            <div class="modal-body">
+               <div id="wb_cookieHeading" style="display:block;width:100%;z-index:77;">
+                  <h2 id="cookieHeading">This website uses cookies to ensure you get the best experience on our website. </h2>
+               </div>
+               <input type="submit" id="cookieButton" onclick="$('#cookiePopup').modal('hide');return false;" name="" value="Got it!" style="display:inline-block;width:111px;height:35px;z-index:78;cursor:pointer;" tabindex="1" autofocus>
+               <hr id="spacer-line" style="display:block;width:100%;z-index:79;">
+               <div id="wb_cookieCheckBox" style="display:inline-block;width:16px;height:13px;z-index:80;">
+                  <input type="checkbox" id="cookieCheckBox" name="donotshow" value="on" style="display:inline-block;" tabindex="2"><label for="cookieCheckBox"></label>
+               </div>
+               <label for="cookieButton" id="newsLetterLabel" style="display:inline-block;width:204px;line-height:21px;z-index:81;">Don’t show this popup again</label>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb19.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:3467px;margin:0;border-width:0;z-index:250" width="16" height="16"></a>
+</body>
+</html>
